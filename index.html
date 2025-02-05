@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        
+        <!-- Search Section -->
+        <div class="search-container">
+            <div class="search-box">
+                <span class="material-icons search-icon">search</span>
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn">
+                    <span class="material-icons">arrow_forward</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Weather Details -->
+        <div id="weather-details" class="weather-details">
+            <div class="weather-card">
+                <div class="main-weather">
+                    <div class="datetime-section">
+                        <p id="current-date"></p>
+                        <p id="current-time"></p>
+                    </div>
+                    <div class="temp-section">
+                        <span id="temperature"></span>
+                        <span class="material-icons" id="weather-icon">wb_sunny</span>
+                    </div>
+                    <h2 id="city-name"></h2>
+                </div>
+                
+                <div class="weather-info">
+                    <div class="info-item">
+                        <span class="material-icons">water_drop</span>
+                        <div class="info-text">
+                            <p class="label">Humidity</p>
+                            <p class="value"><span id="humidity"></span>%</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="material-icons">air</span>
+                        <div class="info-text">
+                            <p class="label">Wind Speed</p>
+                            <p class="value"><span id="wind-speed"></span> m/s</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="save-btn">
+                    <span class="material-icons">favorite</span>
+                    Save to Favorites
+                </button>
+            </div>
+        </div>
+
+        <!-- Favorite Cities -->
+        <div class="favorites-section">
+            <h3 class="favorites-title">
+                <span class="material-icons">bookmark</span>
+                Favorite Cities
+            </h3>
+            <div class="favorites-container">
+                <ul id="favorite-cities">
+                    <!-- Favorite cities will be listed here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
